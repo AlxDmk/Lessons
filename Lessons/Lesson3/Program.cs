@@ -7,10 +7,10 @@ namespace Lessons
         static void Main(string[] args)
         {
 
-            ///
-            /// 1.Написать программу, выводящую элементы двумерного массива по диагонали.
-            /// 
-            ///   Очень много повторяющегося кода. Если подскажите, как сократить код, то буду благодарен
+            //
+            // 1.Написать программу, выводящую элементы двумерного массива по диагонали.
+            //
+            // Очень много повторяющегося кода.Если подскажите, как сократить код, то буду благодарен
 
             char[,] arr = new char[11, 11];  // 
             int iArr = arr.GetLength(0);
@@ -80,29 +80,32 @@ namespace Lessons
 
             //
 
-            //string[,] yPages = new string[5, 2];
-            // yPages[0, 0] = "Контакт";
-            // yPages[0, 1] = "номер телефона/email";
+            string[,] yPages = new string[5, 2];
+            yPages[0, 0] = "Контакт";
+            yPages[0, 1] = "номер телефона/email";
 
-            // int i = 1;
-            // while (i < yPages.GetLength(0))
-            // {
-            //     Console.WriteLine($"Введите имя контакта № {i}");
-            //     yPages[i, 0] = Console.ReadLine();
+            int i = 1;
+            while (i < yPages.GetLength(0))
+            {
+                Console.WriteLine($"Введите имя контакта № {i}");
+                yPages[i, 0] = Console.ReadLine();
+                                
+                Console.WriteLine($"Введите телефон /email контакта № {i}");
+                yPages[i, 1] = Console.ReadLine();
+                i++;
+            }
 
+            Console.WriteLine("Спасибо! Книга создана");
 
-
-
-            //     i++;
-            //     Console.WriteLine($"Введите телефон /email контакта № {i-1}");
-            //     yPages[0, i] = Console.ReadLine();
-            // }
-
-            // Console.WriteLine("Спасибо! Книга создана");
-
-
-
-
+            for (int x = 0; x < yPages.GetLength(0); x++)
+            {
+                for (int y = 0; y < yPages.GetLength(1); y++)
+                {
+                    Console.Write($"{yPages[x, y]}     ");
+                    
+                }
+                Console.WriteLine();
+            }
 
 
             //
@@ -141,7 +144,7 @@ namespace Lessons
                     map[zn] = "X";
                 }
             }
-            
+
             int m = 10;                             // предобразовываем в двумерный масси и выводим в консоль
             string[,] matrix = new string[10, 10];
 
@@ -149,7 +152,7 @@ namespace Lessons
             {
                 for (int j = 0; j < m; j++, ctr++)
                 {
-                    matrix[i,j] = map[ctr];
+                    matrix[i, j] = map[ctr];
                     Console.Write($"{matrix[i, j]}  ");
                 }
                 Console.WriteLine();
