@@ -16,7 +16,7 @@ namespace Lessons
             string[][] fios = new string[3][];
             fios[0] = new string[3] { "Иван", "Иванович", "Иванов" };
             fios[1] = new string[3] { "Степан", "Аркадьевич", "Андреев" };
-            fios[2] = new string[3] { "Александр", "Валентинович", "Дымченко" };
+            fios[2] = new string[3] { "Александр", "Валентинович", "Димченко" };
 
             for (int i = 0; i < fios.Length; i++)
             {
